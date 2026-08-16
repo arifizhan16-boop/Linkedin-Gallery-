@@ -11,21 +11,21 @@ const navItems = [
 
 export function TopNav() {
   return (
-    <header className="sticky top-0 z-20 border-b border-zinc-300 bg-white">
+    <header className="sticky top-0 z-20 border-b border-white/10 bg-[#0d1428]/80 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center gap-4 px-4 py-2">
         <Link href="/" aria-label="Post Gallery home" className="flex shrink-0 items-center">
-          <LinkedinLogo className="h-9 w-9 text-[#0a66c2]" />
-          <span className="ml-2 hidden text-lg font-semibold text-zinc-800 sm:inline">
+          <LinkedinLogo className="h-9 w-9 text-[#1c91ff]" />
+          <span className="ml-2 hidden text-lg font-semibold text-zinc-100 sm:inline">
             Post Gallery
           </span>
         </Link>
-        <div className="hidden h-9 min-w-0 flex-1 items-center gap-2 rounded p-1.5 sm:flex">
-          <SearchIcon className="h-5 w-5 shrink-0 text-zinc-500" />
+        <div className="hidden h-9 min-w-0 flex-1 items-center gap-2 rounded-lg border border-white/10 bg-white/5 p-1.5 sm:flex">
+          <SearchIcon className="h-5 w-5 shrink-0 text-zinc-400" />
           <input
             type="search"
             placeholder="Search"
             aria-label="Search"
-            className="w-full bg-transparent text-sm text-zinc-800 outline-none placeholder:text-zinc-500"
+            className="w-full bg-transparent text-sm text-zinc-100 outline-none placeholder:text-zinc-500"
           />
         </div>
         <nav className="hidden items-center gap-5 md:flex" aria-label="Primary">
@@ -37,7 +37,7 @@ export function TopNav() {
             >
               <svg
                 viewBox="0 0 24 24"
-                className={`h-6 w-6 ${item.active ? "text-zinc-900" : "text-zinc-500 group-hover:text-zinc-900"}`}
+                className={`h-6 w-6 ${item.active ? "text-[#5bb8ff]" : "text-zinc-500 group-hover:text-zinc-100"}`}
                 fill="none"
                 stroke="currentColor"
                 strokeWidth="1.8"
@@ -80,9 +80,9 @@ export function TopNav() {
                 )}
               </svg>
               {item.active ? (
-                <span className="text-zinc-900">{item.label}</span>
+                <span className="text-[#5bb8ff]">{item.label}</span>
               ) : (
-                <span className="text-zinc-500 group-hover:text-zinc-900">
+                <span className="text-zinc-500 group-hover:text-zinc-100">
                   {item.label}
                 </span>
               )}
@@ -93,7 +93,7 @@ export function TopNav() {
           <a href="#" className="flex flex-col items-center text-xs font-medium">
             <svg
               viewBox="0 0 24 24"
-              className="h-6 w-6 text-zinc-500 hover:text-zinc-900"
+              className="h-6 w-6 text-zinc-500 hover:text-zinc-100"
               fill="none"
               stroke="currentColor"
               strokeWidth="1.8"
@@ -107,12 +107,12 @@ export function TopNav() {
             </svg>
             <span className="text-zinc-500">Work</span>
           </a>
-          <div className="hidden h-8 border-l border-zinc-300 sm:block" />
+          <div className="hidden h-8 border-l border-white/10 sm:block" />
           <div className="hidden flex-col items-center sm:flex">
-            <div className="flex h-6 w-6 items-center justify-center rounded-full bg-[#0a66c2] text-xs font-semibold text-white">
+            <div className="flex h-6 w-6 items-center justify-center rounded-full bg-gradient-to-br from-[#1c91ff] to-[#0a66c2] text-xs font-semibold text-white">
               SC
             </div>
-            <span className="mt-0.5 flex items-center text-xs text-zinc-500">
+            <span className="mt-0.5 flex items-center text-xs text-zinc-400">
               Me
               <svg
                 viewBox="0 0 24 24"
@@ -126,7 +126,7 @@ export function TopNav() {
           </div>
         </div>
       </div>
-      <div className="border-t border-zinc-200 md:hidden">
+      <div className="border-t border-white/10 md:hidden">
         <nav className="mx-auto flex max-w-md items-center justify-around" aria-label="Mobile">
           {navItems.map((item) => (
             <a
@@ -134,7 +134,7 @@ export function TopNav() {
               href="#"
               className="flex flex-col items-center gap-0.5 px-3 py-2 text-[11px] font-medium"
             >
-              <span className="h-5 w-5 rounded-full bg-zinc-300" />
+              <span className="h-5 w-5 rounded-full bg-zinc-700" />
               {item.short}
             </a>
           ))}
