@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { LinkedinLogo, SearchIcon } from "@/app/components/icons";
+import type { Profile } from "@/app/lib/profile-types";
 
 const navItems = [
   { label: "Home", short: "Home", active: true },
@@ -9,7 +10,7 @@ const navItems = [
   { label: "Notifications", short: "Notifications" },
 ];
 
-export function TopNav() {
+export function TopNav({ profile }: { profile: Profile }) {
   return (
     <header className="sticky top-0 z-20 border-b border-white/10 bg-[#0d1428]/80 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center gap-4 px-4 py-2">
@@ -108,9 +109,11 @@ export function TopNav() {
             <span className="text-zinc-500">Work</span>
           </a>
           <div className="hidden h-8 border-l border-white/10 sm:block" />
-          <div className="hidden flex-col items-center sm:flex">
-            <div className="flex h-6 w-6 items-center justify-center rounded-full bg-gradient-to-br from-[#1c91ff] to-[#0a66c2] text-xs font-semibold text-white">
-              SC
+          <Link href="/profile" className="hidden flex-col items-center sm:flex">
+            <div
+              className={`flex h-6 w-6 items-center justify-center rounded-full ${profile.avatarColor} text-xs font-semibold text-white`}
+            >
+              {profile.initials}
             </div>
             <span className="mt-0.5 flex items-center text-xs text-zinc-400">
               Me
@@ -123,7 +126,7 @@ export function TopNav() {
                 <path d="M6 9l6 6 6-6" />
               </svg>
             </span>
-          </div>
+          </Link>
         </div>
       </div>
       <div className="border-t border-white/10 md:hidden">
