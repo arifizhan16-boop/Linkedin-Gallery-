@@ -13,8 +13,11 @@ export function TopNav() {
   return (
     <header className="sticky top-0 z-20 border-b border-zinc-300 bg-white">
       <div className="mx-auto flex max-w-6xl items-center gap-4 px-4 py-2">
-        <Link href="/" aria-label="LinkedIn home" className="shrink-0">
+        <Link href="/" aria-label="Post Gallery home" className="flex shrink-0 items-center">
           <LinkedinLogo className="h-9 w-9 text-[#0a66c2]" />
+          <span className="ml-2 hidden text-lg font-semibold text-zinc-800 sm:inline">
+            Post Gallery
+          </span>
         </Link>
         <div className="hidden h-9 min-w-0 flex-1 items-center gap-2 rounded p-1.5 sm:flex">
           <SearchIcon className="h-5 w-5 shrink-0 text-zinc-500" />

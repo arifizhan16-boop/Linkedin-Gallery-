@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "LinkedIn Gallery | Posts Feed",
+  title: "Post Gallery",
   description: "A gallery of LinkedIn-style posts.",
 };
 

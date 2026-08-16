@@ -1,8 +1,6 @@
 import { posts } from "@/app/lib/posts";
 import { PostCard } from "@/app/components/post-card";
 import { TopNav } from "@/app/components/top-nav";
-import { LeftSidebar } from "@/app/components/left-sidebar";
-import { RightSidebar } from "@/app/components/right-sidebar";
 import {
   EventIcon,
   PhotoIcon,
@@ -64,17 +62,17 @@ export default function Home() {
   return (
     <div className="flex min-h-screen flex-col bg-zinc-100">
       <TopNav />
-      <div className="mx-auto w-full max-w-6xl flex-1 px-4 py-5">
-        <div className="grid grid-cols-1 gap-6 lg:grid-cols-[1fr_2fr_1fr]">
-          <LeftSidebar />
-          <main className="w-full max-w-xl justify-self-center space-y-3">
-            <StartPost />
+      <div className="mx-auto w-full max-w-7xl flex-1 px-4 py-5">
+        <main>
+          <StartPost />
+          <div className="mt-5 columns-1 gap-5 sm:columns-2 lg:columns-3">
             {posts.map((post) => (
-              <PostCard key={post.id} post={post} />
+              <div key={post.id} className="mb-5 break-inside-avoid">
+                <PostCard post={post} />
+              </div>
             ))}
-          </main>
-          <RightSidebar />
-        </div>
+          </div>
+        </main>
       </div>
     </div>
   );

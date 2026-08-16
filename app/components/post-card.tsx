@@ -7,15 +7,7 @@ import {
   MoreIcon,
   RepostIcon,
   SendIcon,
-  ThumbsUpIcon,
 } from "@/app/components/icons";
-
-function formatCount(count: number): string {
-  if (count >= 1000) {
-    return `${(count / 1000).toFixed(count % 1000 === 0 ? 0 : 1)}K`;
-  }
-  return String(count);
-}
 
 export function PostCard({ post }: { post: Post }) {
   return (
@@ -60,29 +52,6 @@ export function PostCard({ post }: { post: Post }) {
           />
         </div>
       )}
-
-      <div className="flex items-center justify-between px-4 py-3 text-xs text-zinc-500">
-        <div className="flex items-center gap-1.5">
-          <span className="flex h-5 w-5 items-center justify-center rounded-full bg-blue-600 text-white">
-            <ThumbsUpIcon className="h-3 w-3" />
-          </span>
-          <span>{formatCount(post.reactions)}</span>
-        </div>
-        <div className="flex items-center gap-3">
-          <button
-            type="button"
-            className="hover:text-blue-700 hover:underline"
-          >
-            {formatCount(post.comments)} comments
-          </button>
-          <button
-            type="button"
-            className="hover:text-blue-700 hover:underline"
-          >
-            {formatCount(post.reposts)} reposts
-          </button>
-        </div>
-      </div>
 
       <div className="border-t border-zinc-200 px-2 py-1">
         <div className="flex">
