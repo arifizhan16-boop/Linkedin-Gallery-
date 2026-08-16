@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#064e3b"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <g fill="#ffffff" opacity="0.12">
+    <circle cx="160" cy="160" r="110"/>
+    <circle cx="1440" cy="740" r="140"/>
+  </g>
+  <g font-family="Arial, sans-serif">
+    <text x="120" y="170" font-size="64" fill="#ffffff" font-weight="bold" opacity="0.9">Sustainability at scale</text>
+    <text x="122" y="240" font-size="34" fill="#ffffff" opacity="0.75">Net zero roadmap for 2030</text>
+  </g>
+  <g>
+    <rect x="120" y="360" width="1360" height="400" rx="18" fill="#ffffff"/>
+    <text x="180" y="450" font-family="Arial, sans-serif" font-size="30" fill="#0f172a" font-weight="bold">Carbon emissions (kt CO₂e)</text>
+    <g font-family="Arial, sans-serif" font-size="24" fill="#475569">
+      <text x="180" y="680">2019</text>
+      <text x="430" y="680">2021</text>
+      <text x="680" y="680">2023</text>
+      <text x="930" y="680">2025</text>
+      <text x="1180" y="680">2027</text>
+      <text x="1400" y="680">2030</text>
+    </g>
+    <g>
+      <rect x="180" y="560" width="120" height="120" rx="10" fill="#22c55e"/>
+      <rect x="430" y="520" width="120" height="160" rx="10" fill="#16a34a"/>
+      <rect x="680" y="480" width="120" height="200" rx="10" fill="#15803d"/>
+      <rect x="930" y="420" width="120" height="260" rx="10" fill="#166534"/>
+      <rect x="1180" y="380" width="120" height="300" rx="10" fill="#14532d"/>
+      <rect x="1400" y="580" width="80" height="100" rx="10" fill="#86efac"/>
+    </g>
+  </g>
+</svg>
